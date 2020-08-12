@@ -1,0 +1,19 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main + main {
+  margin-top: 16px;
+}
+
+form .input-group {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+
+form .input-group label {
+  margin-bottom: 16px;
+}
