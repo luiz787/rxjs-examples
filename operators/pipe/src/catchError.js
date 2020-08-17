@@ -1,6 +1,9 @@
 const { of, EMPTY } = require("rxjs");
 const { catchError, tap, map } = require("rxjs/operators");
 
+/*
+The catchError operator allows an error thrown in a pipe to be caught and handled somehow.
+*/
 const obs = of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
 obs

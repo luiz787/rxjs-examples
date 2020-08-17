@@ -6,7 +6,7 @@ import {
   AfterViewInit,
 } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { fromEvent, Observable } from 'rxjs';
+import { fromEvent, Observable, of } from 'rxjs';
 import { map, debounceTime, switchMap, mergeMap } from 'rxjs/operators';
 
 @Component({
@@ -44,23 +44,3 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   constructor(private http: HttpClient) {}
 }
-
-/*
-COLA: ignore
-
-private setupFromEvent() {
-  this.eventHandler$ = fromEvent(
-    this.searchInput.nativeElement,
-    'input'
-  ).pipe(
-    map((e) => e.target as HTMLInputElement),
-    map((input) => input.value),
-    debounceTime(500),
-    switchMap((_val) => {
-      return this.http.get('https://jsonplaceholder.typicode.com/todos/1');
-    }),
-    map((response) => (response as any).title)
-  );
-}
-
-*/

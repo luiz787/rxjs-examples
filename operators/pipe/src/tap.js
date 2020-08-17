@@ -10,4 +10,8 @@ const obs2 = of(
   createObject(9, 2)
 );
 
+/*
+tap can be used to do side effects on a pipe.
+It is particularly useful for debugging.
+*/
 obs2.pipe(tap(console.log), pluck("b"), tap(console.log)).subscribe();
